@@ -1,0 +1,115 @@
+<!-- Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/VPaoNP.
+User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
+User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
+User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.
+
+User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
+
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FCC Survey</title>
+    <link href="https://fonts.googleapis.com/css?family=Karla|Rubik&display=swap" rel="stylesheet">
+    <style>
+body {
+  font-family: "Karla", sans-serif;
+}
+h1 {
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
+div {
+  padding: 5px;
+}
+#number {
+  width: 130px
+}
+form {
+  margin-left: 50px;
+}
+#submit {
+    background-color: #59ace0;
+  border-radius: 4px;
+  color: white;
+  font-size: 1em;
+  height: 40px;
+  width: 96px;
+  margin: 10px;
+  border: 0px solid;
+}
+    </style>
+</head>
+<body>
+        <h1 id="title">FCC Survey</h1>
+        <div>
+          <p id="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis veniam obcaecati voluptatem placeat id corporis esse ipsa assumenda tenetur repudiandae fugit molestiae doloribus quia in velit voluptate, deserunt quo pariatur.
+          </p>
+          <form action="" id="survey-form">
+            <div> <label for="full_name" id="name-label">Name:</label>
+              <input type="text" name="full_name" id="name" placeholder="Enter your name" required></div>
+            <div> <label for="email" id="email-label">Email:</label>
+              <input type="email" name="email" id="email" placeholder="Enter your email" required></div>
+            <div>
+              <label for="number" id="number-label">Age:</label>
+              <input type="number" name="age" id="number" placeholder="Enter your age" required min="1" max="125"></div>
+            <div>Which option best describes your current role? <br>
+              <select name="current_role" id="dropdown">
+                          <option value="student">Student</option>
+                          <option value="job">Full Time Job</option>
+                          <option value="learner">Full Time Learner</option>
+                          <option value="preferNo">Prefer not to say</option>
+                          <option value="other">Other</option>
+                      </select>
+            </div>
+            <div>How likely is that you would recommend freeCodeCamp to a friend? <br>
+              <input type="radio" name="recommend" id="def" value="def"> Definitely <br>
+              <input type="radio" name="recommend" id="may" value="maybe"> Maybe<br>
+              <input type="radio" name="recommend" id="not" value='notsure'> Not sure
+            </div>
+            <div>What do you like most in FCC? <br>
+              <select name="like_most" id="mostlike">
+                          <option  disabled selected value>Select an Option</option>
+                          <option value="challenges">Challenges</option>
+                          <option value="projects">Projects</option>
+                          <option value="community">Community</option>
+                          <option value="openSource">Open Source</option>
+                      </select>
+            </div>
+            <div>Things that should be improved in the future (Check all that apply): <br>
+              <input type="checkbox" name="improve" id="frontEnd" value="frontEnd"> Front-end Projects <br>
+              <input type="checkbox" name="improve" id="backEnd" value="backEnd"> Back-end Projects <br>
+              <input type="checkbox" name="improve" id="dataVis" value="dataVis"> Data Visualization <br>
+              <input type="checkbox" name="improve" id="challenges" value="challenges"> Challenges <br>
+              <input type="checkbox" name="improve" id="openSourceComm" value="openSourceComm"> Open Source Community <br>
+              <input type="checkbox" name="improve" id="gitter" value="gitter"> Gitter help rooms <br>
+              <input type="checkbox" name="improve" id="videos" value="videos"> Videos <br>
+              <input type="checkbox" name="improve" id="cityMeetup" value="cityMeetup"> City Meetups <br>
+              <input type="checkbox" name="improve" id="Wiki" value="wiki"> Wiki <br>
+              <input type="checkbox" name="improve" id="forum" value="forum"> Forum <br>
+              <input type="checkbox" name="improve" id="additionalCourses" value="addtCourses"> Additional Courses
+            </div>
+            <div>Any Comments or Suggestions? <br>
+              <textarea name="comments" id="" cols="30" rows="10" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div>
+              <button type="submit" id="submit">Submit</button>
+            </div>
+        
+          </form>
+        
+        </div>
+
+</body>
+</html>
